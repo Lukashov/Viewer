@@ -3,6 +3,9 @@ package testapp.viewer.presentation;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 1; i <= 30; i++) {
             FileModel fileModel = new FileModel(i);
 
-            RFileModel rFileModel = new RFileModel(fileModel.getFileName(),
-                    fileModel.isFolder(), fileModel.getModDate(),
+            RFileModel rFileModel = new RFileModel(fileModel.getFileName(), fileModel.isFolder(),
+                    new DateTime(fileModel.getModDate()).withZone(DateTimeZone.UTC).toString("d MMMM, yyyy"),
                     String.valueOf(fileModel.getFileType()), fileModel.isOrange(), fileModel.isBlue());
 
             fileModelList.add(rFileModel);

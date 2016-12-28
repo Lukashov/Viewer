@@ -1,5 +1,7 @@
 package testapp.viewer.model;
 
+import org.joda.time.DateTime;
+
 import java.util.Date;
 import java.util.Random;
 
@@ -23,7 +25,7 @@ public class FileModel
 
         this.fileName = type + " " + i;
         this.isFolder = random.nextBoolean();
-        this.modDate = modDate;
+        this.modDate = DateTime.now().withTimeAtStartOfDay().toDate();
         this.fileType = type;
         this.isOrange = random.nextBoolean();
         this.isBlue = random.nextBoolean();

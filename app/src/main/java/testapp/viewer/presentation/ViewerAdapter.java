@@ -69,7 +69,7 @@ public class ViewerAdapter extends RecyclerView.Adapter<ViewerAdapter.ViewHolder
         Picasso.with(holder.icon.getContext()).load(drawable).into(holder.icon);
 
         holder.title.setText(list.get(position).getFileName());
-//        holder.modifiedTime.setText(list.get(position).getModDate().toString());
+        holder.modifiedTime.setText("modified " + list.get(position).getModDate());
 
         if (list.get(position).isBlue() && list.get(position).isOrange()) {
             holder.firstColorIndicator.setBackground(holder.firstColorIndicator.getContext().getResources().getDrawable(R.color.orange));

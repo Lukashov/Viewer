@@ -14,7 +14,7 @@ public class RFileModel extends RealmObject{
     @PrimaryKey
     private String fileName;
     private boolean isFolder;
-    private Date modDate;
+    private String modDate;
     private String fileType;
     boolean isOrange;
     boolean isBlue;
@@ -22,7 +22,7 @@ public class RFileModel extends RealmObject{
     public RFileModel() {
     }
 
-    public RFileModel(String fileName, boolean isFolder, Date modDate, String fileType, boolean isOrange, boolean isBlue) {
+    public RFileModel(String fileName, boolean isFolder, String modDate, String fileType, boolean isOrange, boolean isBlue) {
         this.fileName = fileName;
         this.isFolder = isFolder;
         this.modDate = modDate;
@@ -47,11 +47,11 @@ public class RFileModel extends RealmObject{
         isFolder = folder;
     }
 
-    public Date getModDate() {
+    public String getModDate() {
         return modDate;
     }
 
-    public void setModDate(Date modDate) {
+    public void setModDate(String modDate) {
         this.modDate = modDate;
     }
 
