@@ -27,7 +27,6 @@ public class ChooseDialog extends DialogFragment{
 
         ButterKnife.bind(this, layout);
 
-        dialog.setTitle("My Dialog Title");
         dialog.setContentView(layout);
 
         return dialog;
