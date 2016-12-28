@@ -18,17 +18,23 @@ public class FileModel
     boolean isOrange;
     boolean isBlue;
 
+//    Create random content for this model
     public FileModel(int i) {
         Random random = new Random();
 
-        FileType type = FileType.getRandom();
-
-        this.fileName = type + " " + i;
         this.isFolder = random.nextBoolean();
-        this.modDate = DateTime.now().withTimeAtStartOfDay().toDate();
-        this.fileType = type;
-        this.isOrange = random.nextBoolean();
-        this.isBlue = random.nextBoolean();
+
+        if (isFolder()) {
+            this.fileName = "FOLDER " + i;
+        } else {
+            FileType type = FileType.getRandom();
+            this.fileName = type + " " + i;
+            this.modDate = DateTime.now().withTimeAtStartOfDay().toDate();
+            this.fileType = type;
+            this.isOrange = random.nextBoolean();
+            this.isBlue = random.nextBoolean();
+        }
+
     }
 
     public String getFileName()

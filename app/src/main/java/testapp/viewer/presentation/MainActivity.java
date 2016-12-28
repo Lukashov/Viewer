@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 1; i <= 30; i++) {
             FileModel fileModel = new FileModel(i);
 
+//           Transform content for DB
             RFileModel rFileModel = new RFileModel(fileModel.getFileName(), fileModel.isFolder(),
                     new DateTime(fileModel.getModDate()).withZone(DateTimeZone.UTC).toString("d MMMM, yyyy"),
                     String.valueOf(fileModel.getFileType()), fileModel.isOrange(), fileModel.isBlue());
