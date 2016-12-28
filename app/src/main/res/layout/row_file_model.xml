@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    xmlns:tools="http://schemas.android.com/tools"
+                                    android:elevation="8dp">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader_LIPW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="10dp"
+            android:layout_height="50dp"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/firstColorIndicator_RFM"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <View
+                android:id="@+id/secondColorIndicator_RFM"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivIcon_RFM"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            tools:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/tv_modified_time_RFM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="modified 21.12.2012"
+            android:textSize="10sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_title_RFM"
+            android:paddingTop="8dp"/>
+        <TextView
+            android:id="@+id/tv_title_RFM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Johny Cash"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
